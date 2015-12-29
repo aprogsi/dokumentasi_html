@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Nama Product &middot; Installation &amp; Usage</title>
+	
+	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,700'>
+	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,300italic,400italic,600italic'>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/clientresponse.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body id="top">
+	<div id="wrap">
+
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						
+						
+						<li><a href="http://aprogsi.org">Contact Programmer</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="userbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<a href=""><img alt="clientResponse" class="logo" src="images/logo.png" /></a>
+					</div>
+					<div class="col-md-6">
+						<p class="lead"> Dokumentasi : Cara Instalasi dan Penggunaan</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			
+			<div class="contentAlt">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="list-group">
+							<li class="list-group-item primary">Daftar Isi</li>
+							<a href="#preinstallation" class="list-group-item">A. Pra-instalasi</a>
+							<a href="#installation" class="list-group-item">B. Instalasi</a>
+							<a href="#export" class="list-group-item">C. Export Data dari versi V.3</a>
+							<a href="#import" class="list-group-item">D. Import Data dari versi V.3</a>
+							<a href="#settings" class="list-group-item">E. Settings Situs</a>
+							<a href="#advanced" class="list-group-item">F. Style - Advanced &amp; Images</a>
+							<a href="#support" class="list-group-item">G. Help &amp; Support</a>
+							<a href="#ftp" class="list-group-item">H. Catatan tentang FTP</a>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h3 class="panel-title">Versi Saat ini: 4.1<span class="pull-right">Nopember 2015</span></h3>
+							</div>
+							<div class="panel-body">
+								<p class="lead">
+									Terima kasih telah menggunakan <a href="">clientResponse</a>.<br>
+									Jika Anda mempunyai pertanyaan diluar penjelasan berikut ini, jangan ragu utk kirim email pada saya <a href="">Agung Hario</a>.<br>
+									Saya dengan senang hati menjawab pertanyaan yang berhubungan dengan produk ini.
+								</p>
+								
+							</div>
+						</div>
+							
+						<div class="content no-margin">
+							<p>clientResponse sangat mudah di install, setup dan digunakan untuk manajemen client dan sebagai alat komunikasi antara Anda dengan client Anda, aplikasi ini menggunakan web application, dibangun dengan HTML &amp; CSS, PHP/MySQLi dan jQuery.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="content">
+				<h4>Sebelum kita mulai</h4>
+				<p>
+					<strong>Silahkan membaca semua dokumentasi ini hingga habis SEBELUM mencoba meng-installnya, atau EXPORT/IMPORT Data. Jika Anda berencana untuk meng-export data dari versi sebelumnya (V.3),
+					JANGAN men-delete apapun pada instalasi versi lama sampai selesai export/import data Anda, dan sudah Anda cek semua. Lakukanlah backup semuanya baik aplikasi maupun data sebelum Anda melakukan perubahan.</strong>
+				</p>
+				<hr />
+				<p>
+					Pada versi ini, Saya ingin menambahkan cara bagaimana cara import data dari versi sebelumnya (assumsi V.3) 
+					ke versi  V.4.1. Sebenarnya sederhana, tetapi saya pikir cara ini adalah yang terbaik. Yang perlu dipikirkan adalah bahwa Anda hanya dapat mengimport dengan type data yang terbatas,
+					Terutama Clients, Projects, Project Payments and Admins/Managers. 
+					Cara Export dan Import data Anda akan dijelaskan detail pada dokumentasi ini.
+				</p>
+				<p class="lead text-danger">Saya ucapkan banyak terima kasih pada semua yang telah memakai produk ini. You guys are just Awesome. =)</p>
+			</div>
+			
+			<div class="content">
+				<h4 id="preinstallation">A. Pra-installation<span class="pull-right"><a href="#top"><i class="fa fa-angle-up"></i> Top</a></span></h4>
+				<h5>1. Unzip clientResponse.</h5>
+				<p>Unzip clientResponse file dan perhatikan  file structure. Anda harus mendapatkan 10 folders dan 3 file.</p>
+
+				<h5>2. Ciptakan  Database.</h5>
+				<p>
+					Langkah pertama adalah menciptakan database MySQL. Proses berikut menjelaskan detail pada kebanyakan website dan web hosting.
+					Ketika Anda pada tahap setup database ,Anda perlu memasukkan informasi:<br />
+					<img src="images/bullet.png" /> <strong>The hostname</strong> - Biasanya (tetapi tidak selalu) 'localhost'<br />
+					<img src="images/bullet.png" /> <strong>The database name</strong> - contoh :clientResponse<br />
+					<img src="images/bullet.png" /> <strong>The database username</strong> - contoh: database_user<br />
+					<img src="images/bullet.png" /> <strong>The database password</strong> - contoh: database_password
+				</p>
+				
+				<h5>3. Meng-upload clientResponse</h5>
+				<p>Uploadlah semua file, lalu lakukan unzip pada web hosting Anda, pastikan file dalam keadaan utuh.</p>
+				<div class="alertMsg info">
+					<i class="fa fa-info-circle"></i> Pastikan untuk chmod	 avatars, uploads dan admin/templates folders ke 755
+				</div>
+
+				<h5>Anda seharusnya telah menciptakan folders/file berikut pada akun host Anda:</h5>
+
+				<p><img src="images/examples/file_structure.png" class="img" /></p>
+			</div>
+			
+			<div class="content">
+				<h4 id="installation">B. Instalasi<span class="pull-right"><a href="#top"><i class="fa fa-angle-up"></i> Top</a></span></h4>
+				<h5>Lakukan dengan Online Setup Wizard</h5>
+				<p>Proses Instalasi sangat mudah dan hanya memerlukan beberapa menit saja.</p>
+				<p>
+					Setelah selesai proses uploading, pergi ke http://www.situsanda.com/clientresponse/ (atau apa saja subfolder dimana Anda meng-upload-nya) dan ikut instruksi pada layar.<br>
+					Biarkan saja sebagai default dan berikan informasi yang spesifik jika diperlukan.
+				</p>
+				
+				<h5>1. Periksa Konfigurasi Server</h5>
+				<p class="lead">clientResponse (WAJIB) menggunakan  PHP 5.x &amp; koneksi MySQLi, dan mcrypt_encrypt / mcrypt_decrypt.</p>
+				<p> Berikut Cek Konfigurasi Server yang akan tampak sebelum Anda bisa melanjutkan proses instalasi. Jika semuanya sudah tercentant dan ok lanjutkan dengan menekan  button "Start the Installation".
+				Jika Tidak, Anda tidak akan pernah melihat tombol "Start the Installation" dan tidak akan bisa melanjutkan proses instalasi. Minta tolong pada web hosting Anda jika sesuatu terjadi kesalahan.
+				</p><p><img src="images/examples/two.png" class="img"></p>
+				
+				<h5>2. Konfigurasi Database &amp; Time Zone</h5>
+				<div class="alertMsg info">
+					<i class="fa fa-info-circle"></i> clientResponse memerlukan koneksi MySQLi.
+				</div>
+
+				<div class="list-group">
+					<a class="list-group-item"><strong>Hostname</strong> <span class="pull-right"><small>pada kebanyakan web hosting biasanya berisi "localhost"</small></span></a>
+					<a class="list-group-item"><strong>Database Name</strong> <span class="pull-right"><small>Nama Database</small></span></a>
+					<a class="list-group-item"><strong>Database Username</strong> <span class="pull-right"><small>username Anda untuk masuk pada database</small></span></a>
+					<a class="list-group-item"><strong>Database Password</strong> <span class="pull-right"><small> password untuk masuk database</small></span></a>
+					<a class="list-group-item"><strong>Select Time Zone</strong> <span class="pull-right"><small>Pilihlah Zona Waktu dari dropdown</small></span></a>
+				</div>
+				<p class="mt10">
+					Setelah Anda memasukkan informasi mengenai database, klik pada "On to Step 2" button.<br>
+					Jika terjadi error pada proses ini, kosongkan database dan juga semua table yang telah tercipta sebelumnya, delete file config.php dari folder dimana Anda upload clientResponse to, dan coba lakukan sekali lagi (ulang proses dari awal).
+				</p>
+				<p><img src="images/examples/three.png" class="img"></p>
+				
+				<p>Jika semua konfigurasi benar maka Anda akan hal berikut:</p>
+				<p><img src="images/examples/four.png" class="img"></p>
+				
+				<h5>3. Setting clientResponse Settings</h5>
+				
+				
+				<h5>4. Akun Primer Admin </h5>
+				<p>
+					Administrator adalah  "Superuser". Akun Admin tidak bisa dihapus.<br>
+					Ketika Selesai mengisi informasi mengenai Akun Admin klik tombol "Complete Install" untuk menyelesaikan proses instalasi.
+				</p>
+
+				<div class="alertMsg warning">
+					<i class="fa fa-warning"></i> Untuk Alasan keamanan , DELETE atau UBAH NAMA folder "install".
+				</div>
+				<p><img src="images/examples/six.png" class="img"></p>
+			</div>
+			
+			<div class="content">
+				<h4 id="export">C. Data Export dari versi V.3<span class="pull-right"><a href="#top"><i class="fa fa-angle-up"></i> Top</a></span></h4>
+				</p>
+				<p><img src="images/examples/five.png" class="img"></p>
+				
+				<h5>2. Export Data Anda</h5>
+				<p><img src="images/examples/seven.png" class="img"></p>
+			</div>
+			
+			<div class="content">
+				<h4 id="import">D. Meng- Import Data clientResponse V.3 <span class="pull-right"><a href="#top"><i class="fa fa-angle-up"></i> Top</a></span></h4>
+				
+				<h5>1. Start Importing Your Data</h5>
+				<p><img src="images/examples/eleven.png" class="img"></p>
+				
+				<p>Ketika data berhasil di-import akan terlihat pesan :</p>
+				<p><img src="images/examples/twelve.png" class="img"></p>
+				
+					.
+				</p>
+			</div>
+			
+			<div class="content">
+				<h4 id="settings">E. Setting Situs<span class="pull-right"><a href="#top"><i class="fa fa-angle-up"></i> Top</a></span></h4>
+				<h5>1. Setting Umum</h5>
+				<p><img src="images/examples/eight.png" class="img" /></p>
+				<p>Setting Situs terbagi menjadi 3 bagian yang berbeda.</p>
+				
+				<h5>A. Setting Situs Global</h5>
+				<ul class="list-group">
+					<li class="list-group-item">
+						<span class="badge">Digunakan dalam notifikasi email dan upload. HARUS menyertakan slash</>.</span>Installation URL
+					</li>
+					<li class="list-group-item">
+						<span class="badge">Pilih bahasa. File bahasa Indonesia diperlukan untuk menerjemahkan English.</span>Localization
+					</li>
+					<li class="list-group-item">
+						<span class="badge"> Pilih No  untuk menolak user anonymous.</span> pilih Enable untuk Self-Registrationser
+					</li>
+					<li class="list-group-item">
+						<span class="badge">contoh : clientResponse (Akan tampak pada atas browser, header dan footer).</span>Site Name
+					</li>
+					<li class="list-group-item">
+						<span class="badge">Tampil pada Invoice dan beberapa area pada web.</span>Business Name
+					</li>
+					<li class="list-group-item">
+						<span class="badge">Alamat bisnis Anda. (Tampak pada Invoice client serta halaman pembayaran)</span>Business Address
+					</li>
+					<li class="list-group-item">
+						<span class="badge">Digunakan pada email notifikasi "from/reply to" alamat email.</span>Business Email
+					</li>
+					<li class="list-group-item">
+						<span class="badge">Nomor Telephone dimana client dapat menghubungi Anda.</span>Business Phone
+					</li>
+				</ul>
+				
+				<h5 class="mt20">B. Avatar &amp; Setting Upload </h5>
+				<ul class="list-group">
+				</ul>
+				
+				<h5 class="mt20">C. Setting Pembayaran Client</h5>
+				<ul class="list-group">
+				</ul>
+				
+				
+				<h5>2. File Localization</h5>
+				<p>aplikasi ini sudah siap untuk diterjemahkan dalam segala bahasa. Semua file Localization diletakkan pada dua folder, yaitu: sisi client adalah folder /language dan sisi Admin adalah /admin/language. Jika bahasa Indonesia belum terlihat pada folder, Anda dapat menggunakan file yang lain. Kemudian terjemahkan sendiri dengan bahasa yang Anda inginkan 
+				<strong>Situs Setting</strong>.</p>
+				<p><img src="images/examples/thirteen.png" class="img" /></p>
+				<p>file bahasa yang bisa Anda gunakan untuk menerjemahkan .</p>
+			</div>
+			
+			<div class="content">
+				<h4 id="advanced">F. Settingan Lanjut — Style &amp; Images<span class="pull-right"><a href="#top"><i class="fa fa-angle-up"></i> Top</a></span></h4>
+				<h5>1. Merubah Style</h5>
+				<p>
+					Meskipun aplikasi ini sudah modern serta menggunakan <a href="http://getbootstrap.com/" target="_blank">Bootstrap Twitter Versi 3.1.1</a>, tapi mungkin Anda tetap ingin merubahnya. Hal ini sangat mudah, namun, diperlukan sedikit skill mengenai HTML/CSS. Untuk yang sudah berpengalaman sangatlah mudah, yaitu dengan meng-edit default file CSS yang bernama "clientresponse.css" dan "custom.css". Jangan lupa menempatkan pada folder utama dan folder pages.
+				</p>
+
+				<h5>2. Gambar/Logo</h5>
+				<p>
+					aplikasi ini menggunakan logo ukuran 400px x 31px. log pada header ketika login berukuran 258px x 20px.
+				</p>
+				<p>Icon &amp; Gambar dapat diubah sesuai selera Anda.</p>
+			</div>
+			
+			<div class="content">
+				<h4 id="support">G. Help &amp; Support<span class="pull-right"><a href="#top"><i class="fa fa-angle-up"></i> Top</a></span></h4>
+				<p>
+					Sekali lagi jika ada pertanyaan atau issu apapaun mengenai software ini jangan ragu untuk menghubungi saya <strong><a href="http://www.aprogsi.org/index.php?do=/profile-15/">Agung Hario</a></strong>.<br>
+					Saya menyediakan support 24 jam dengan memonitor email saya.
+				</p>
+				<p>
+					
+					Saya sangat bahagia mendengar segala feedback dari Anda untuk membuat aplikasi ini menjadi lebih baik.
+				</p>
+				<p><img src="images/examples/rating.png" class="img"></p>
+			</div>
+			
+			<div class="content last">
+				<h4 id="ftp">H. Catatan mengenai FTP<span class="pull-right"><a href="#top"><i class="fa fa-angle-up"></i> Top</a></span></h4>
+				<p>
+					Periksa mengenai setting FTP Anda jika ternyata proses instalasi gagal terus.
+					Saya menemukan beberapa kasus pada aplikasi FTP yang ketika upload mengalami kegagalan sehingga mengakibatkan file korup.
+				</p>
+				<p>
+					Cek apakah aplikasi FTP Anda dalam mengupload file pada mode  ASCII - dimana hal ini menyebabkan 'longline' ketika sedang proses upload.<br>
+					Coba rubah ke Binary and upload sekali lagi. Hapus file instalan sebelumnya dan coba re-install dengan hasil upload-an terbaru.<br>
+					Saya menyarankan menggunakan <a href="http://www.cuteftp.com">CuteFTP</a> 
+				</p>
+				<p><img src="images/examples/ftp.png" class="img"></p>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<p class="text-center">© 2015 <a href="">clientResponse</a></p>
+				</div>
+				<div class="col-md-4">
+					<p class="text-center"><a href="index.php"><img alt="clientResponse" src="images/footer_logo.png"></a></p>
+				</div>
+				<div class="col-md-4">
+					<p class="text-center">Created by <a href="">Agung Hario</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
